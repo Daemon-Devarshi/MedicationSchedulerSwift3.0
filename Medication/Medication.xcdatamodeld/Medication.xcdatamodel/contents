@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10171" systemVersion="15F34" minimumToolsVersion="Automatic">
+    <entity name="Medication" representedClassName=".Medication" syncable="YES">
+        <attribute name="dosage" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="priority" attributeType="Integer 16" defaultValueString="1" syncable="YES"/>
+        <attribute name="scheduleTime" attributeType="Date" syncable="YES"/>
+        <attribute name="unit" attributeType="Integer 16" defaultValueString="NO" syncable="YES"/>
+        <relationship name="medicine" maxCount="1" deletionRule="Nullify" destinationEntity="Medicine" inverseName="medication" inverseEntity="Medicine" syncable="YES"/>
+        <relationship name="patient" maxCount="1" deletionRule="Nullify" destinationEntity="Patient" inverseName="medication" inverseEntity="Patient" syncable="YES"/>
+    </entity>
+    <entity name="Medicine" representedClassName=".Medicine" syncable="YES">
+        <attribute name="name" attributeType="String" maxValueString="254" syncable="YES"/>
+        <relationship name="medication" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Medication" inverseName="medicine" inverseEntity="Medication" syncable="YES"/>
+    </entity>
+    <entity name="Nurse" representedClassName=".Nurse" syncable="YES">
+        <attribute name="email" attributeType="String" maxValueString="254" indexed="YES" syncable="YES"/>
+        <attribute name="password" attributeType="String" maxValueString="32" syncable="YES"/>
+        <relationship name="patient" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Patient" inverseName="nurse" inverseEntity="Patient" syncable="YES"/>
+    </entity>
+    <entity name="Patient" representedClassName=".Patient" syncable="YES">
+        <attribute name="email" attributeType="String" maxValueString="254" indexed="YES" syncable="YES"/>
+        <attribute name="fullName" attributeType="String" maxValueString="128" syncable="YES"/>
+        <attribute name="phoneNumber" attributeType="String" maxValueString="32" syncable="YES"/>
+        <relationship name="medication" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Medication" inverseName="patient" inverseEntity="Medication" syncable="YES"/>
+        <relationship name="nurse" maxCount="1" deletionRule="Nullify" destinationEntity="Nurse" inverseName="patient" inverseEntity="Nurse" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Medication" positionX="-81" positionY="72" width="128" height="135"/>
+        <element name="Medicine" positionX="-83" positionY="258" width="128" height="73"/>
+        <element name="Nurse" positionX="-407" positionY="90" width="128" height="88"/>
+        <element name="Patient" positionX="-243" positionY="81" width="128" height="118"/>
+    </elements>
+</model>
