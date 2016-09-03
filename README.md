@@ -35,12 +35,12 @@ A simple app written in Swift 3.0 which helps nurses to schedule medications for
 
 ######A. Add Nurse - Add Medicine Sequence Diagram
 
-![Add Nurse - Add Medicine Sequence Diagram](https://cloud.githubusercontent.com/assets/959126/18226197/359572b4-7222-11e6-810e-dd7533a15980.png)
+<img src="https://cloud.githubusercontent.com/assets/959126/18226197/359572b4-7222-11e6-810e-dd7533a15980.png" width="620"/>
 
 ######B. Login - Add Patient Sequence Diagram
 
-![Login - Add Patient Sequence Diagram](https://cloud.githubusercontent.com/assets/959126/18226195/31ad356a-7222-11e6-960a-943aca7b5cb4.png)
+<img src="https://cloud.githubusercontent.com/assets/959126/18226195/31ad356a-7222-11e6-960a-943aca7b5cb4.png" width="600"/>
 
 ######C. Add Medication Sequence Diagram
 
-![Add Medication Sequence Diagram](https://cloud.githubusercontent.com/assets/959126/18226196/33570972-7222-11e6-9978-6749d91d367c.png)
+<img src="https://cloud.githubusercontent.com/assets/959126/18226196/33570972-7222-11e6-9978-6749d91d367c.png" width="680"/>
