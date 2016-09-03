@@ -13,23 +13,23 @@ A simple app written in Swift 3.0 which helps nurses to schedule medications for
 
 ######A. Add Nurse Activity
 
-![Add Nurse Activity](https://cloud.githubusercontent.com/assets/959126/18226081/0fde16c2-7220-11e6-867d-84657d0adbfb.png)
+<img src="https://cloud.githubusercontent.com/assets/959126/18226081/0fde16c2-7220-11e6-867d-84657d0adbfb.png" width="350"/>
 
 ######B. Add Medicine Activity
 
-![Add Medicine Activity](https://cloud.githubusercontent.com/assets/959126/18226078/0c3127c6-7220-11e6-8268-ba9b5ef14351.png)
+<img src="https://cloud.githubusercontent.com/assets/959126/18226078/0c3127c6-7220-11e6-8268-ba9b5ef14351.png" width="350"/>
 
 ######C. Login Activity
 
-![Login Activity](https://cloud.githubusercontent.com/assets/959126/18226075/049c472a-7220-11e6-8f87-a101cf1e2e5c.png)
+<img src="https://cloud.githubusercontent.com/assets/959126/18226075/049c472a-7220-11e6-8f87-a101cf1e2e5c.png" width="350"/>
 
 ######D. Add Patient Activity
 
-![Add Patient Activity](https://cloud.githubusercontent.com/assets/959126/18226082/13490c2c-7220-11e6-9406-ac9c2b2493e9.png)
+<img src="https://cloud.githubusercontent.com/assets/959126/18226082/13490c2c-7220-11e6-9406-ac9c2b2493e9.png" width="350"/>
 
 ######E. Add Medication Activity
 
-![Add Medication Activity](https://cloud.githubusercontent.com/assets/959126/18226076/09078eaa-7220-11e6-9746-3c8a5f8fa744.png)
+<img src="https://cloud.githubusercontent.com/assets/959126/18226076/09078eaa-7220-11e6-9746-3c8a5f8fa744.png" width="480"/>
 
 ### Here are  sequence diagrams for stated flow:
 
