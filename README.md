@@ -1,7 +1,7 @@
 # MedicationSchedulerSwift3.0
 A simple app written in Swift 3.0 which helps nurses to schedule medications for their patients.
 
-#####This app has 5 modules:
+###This app has 5 modules:
 
 1. Add Nurse
 2. Add Medicine
@@ -9,7 +9,7 @@ A simple app written in Swift 3.0 which helps nurses to schedule medications for
 4. Add Patient
 5. Add Medication
 
-#####Flow of each is explained in detail by below Activity diagrams:
+###Flow of each is explained in detail by below Activity diagrams:
 
 ######A. Add Nurse Activity
 
@@ -31,7 +31,7 @@ A simple app written in Swift 3.0 which helps nurses to schedule medications for
 
 ![Add Medication Activity](https://cloud.githubusercontent.com/assets/959126/18226076/09078eaa-7220-11e6-9746-3c8a5f8fa744.png)
 
-##### Here are  sequence diagrams for stated flow:
+### Here are  sequence diagrams for stated flow:
 
 ######A. Add Nurse - Add Medicine Sequence Diagram
 
