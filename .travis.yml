@@ -1,0 +1,5 @@
+language: objective-c
+osx_image: xcode8
+xcode_project: Medication.xcodeproj
+xcode_scheme: Medication
+xcode_sdk: iphonesimulator10.0
