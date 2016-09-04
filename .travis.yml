@@ -4,7 +4,7 @@ xcode_project: Medication.xcodeproj
 xcode_scheme: Medication
 xcode_sdk: iphonesimulator10.0
 before_install:
-- security delete-certificate -c "Apple Worldwide Developer Relations Certification Authority" /Library/Keychains/System.keychain
-- security delete-certificate -c "Apple Worldwide Developer Relations Certification Authority" /Library/Keychains/login.keychain
-- curl -O -L http://developer.apple.com/certificationauthority/AppleWWDRCA.cer
-- security import AppleWWDRCA.cer  -k ~/Library/Keychains/login.keychain -A
+- sudo security delete-certificate -c "Apple Worldwide Developer Relations Certification Authority" /Library/Keychains/System.keychain
+- sudo security delete-certificate -c "Apple Worldwide Developer Relations Certification Authority" /Library/Keychains/login.keychain
+- sudo curl -O -L http://developer.apple.com/certificationauthority/AppleWWDRCA.cer
+- sudo security import AppleWWDRCA.cer  -k ~/Library/Keychains/login.keychain -A
