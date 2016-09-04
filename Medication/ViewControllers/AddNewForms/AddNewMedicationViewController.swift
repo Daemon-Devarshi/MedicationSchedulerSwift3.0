@@ -138,7 +138,7 @@ extension AddNewMedicationViewController {
             
             // setting dueDateComponents for recurring events
             let gregorian = NSCalendar(identifier:NSCalendar.Identifier.gregorian)
-            let dailyComponents = (gregorian as NSCalendar?)?.components([.year, .month, .weekday, .hour, .minute, .second, .timeZone], from: scheduleTime!)
+            let dailyComponents = gregorian?.components([.year, .month, .day, .hour, .minute, .second, .timeZone], from: scheduleTime!)
             reminder.dueDateComponents = dailyComponents
             
             do {

@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="92" width="375" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Esh-dl-kSZ" id="7Qd-l9-g7O">
-                                    <frame key="frameInset" width="375" height="49.5"/>
+                                    <frame key="frameInset" width="375" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRf-5w-2Vh">
@@ -44,17 +44,18 @@
                                 <rect key="frame" x="0.0" y="142" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HE9-ca-ORM" id="9GP-Y2-IO0">
-                                    <frame key="frameInset" width="375" height="99.5"/>
+                                    <frame key="frameInset" width="375" height="99"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Patient Found!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVS-h5-PCn">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Patient Found! Tap on '+ Patient' to add patients." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVS-h5-PCn">
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" red="0.55676333109537768" green="0.55676333109537768" blue="0.55676333109537768" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="GVS-h5-PCn" firstAttribute="centerX" secondItem="9GP-Y2-IO0" secondAttribute="centerX" id="YEA-6c-8Jb"/>
+                                        <constraint firstItem="GVS-h5-PCn" firstAttribute="leading" secondItem="9GP-Y2-IO0" secondAttribute="leadingMargin" constant="8" id="GBw-zN-17b"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="GVS-h5-PCn" secondAttribute="trailing" constant="8" id="KVf-SU-WLp"/>
                                         <constraint firstItem="GVS-h5-PCn" firstAttribute="centerY" secondItem="9GP-Y2-IO0" secondAttribute="centerY" id="sRN-k1-uo3"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -237,22 +238,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1x-9N-5ZY">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyF-I4-lGq">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="16V-H1-KXc">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scheduled Medications:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mE7-zP-mSA">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -266,7 +267,7 @@
                         <constraints>
                             <constraint firstItem="16V-H1-KXc" firstAttribute="leading" secondItem="hyF-I4-lGq" secondAttribute="leading" id="5SM-Dm-WYM"/>
                             <constraint firstItem="B1x-9N-5ZY" firstAttribute="leading" secondItem="Zse-eV-NRv" secondAttribute="leadingMargin" id="6qI-bP-fJg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="B1x-9N-5ZY" secondAttribute="trailing" constant="8" id="8hn-mY-fco"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="B1x-9N-5ZY" secondAttribute="trailing" id="8hn-mY-fco"/>
                             <constraint firstItem="0XQ-1y-t4H" firstAttribute="top" secondItem="mE7-zP-mSA" secondAttribute="bottom" constant="12" id="BMD-Ur-B4M"/>
                             <constraint firstItem="0XQ-1y-t4H" firstAttribute="leading" secondItem="Zse-eV-NRv" secondAttribute="leading" id="CNB-bu-bvG"/>
                             <constraint firstAttribute="trailing" secondItem="0XQ-1y-t4H" secondAttribute="trailing" id="GEb-kA-Deq"/>

@@ -16,43 +16,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedicationInfoTableViewCell" rowHeight="156" id="UP4-KF-BLV" customClass="MedicationInfoTableViewCell" customModule="Medication" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="156"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedicationInfoTableViewCell" rowHeight="88" id="UP4-KF-BLV" customClass="MedicationInfoTableViewCell" customModule="Medication" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UP4-KF-BLV" id="Qd4-VQ-v87">
-                                    <frame key="frameInset" width="375" height="155.5"/>
+                                    <frame key="frameInset" width="375" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicine" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1u2-9C-5M4">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scheduled Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ex4-U0-eh2">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99:99 PM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ex4-U0-eh2">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="76" id="Yid-tf-7V8"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosage" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYd-la-0qg">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urg-Ar-IY2">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urg-Ar-IY2">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="55" id="gNC-BH-FpH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="BYd-la-0qg" firstAttribute="leading" secondItem="1u2-9C-5M4" secondAttribute="leading" id="BCX-oT-m6k"/>
                                         <constraint firstItem="1u2-9C-5M4" firstAttribute="top" secondItem="Qd4-VQ-v87" secondAttribute="topMargin" constant="8" id="CN9-2e-L5V"/>
-                                        <constraint firstItem="Ex4-U0-eh2" firstAttribute="top" secondItem="1u2-9C-5M4" secondAttribute="bottom" constant="12" id="Mgj-Zp-Y2s"/>
-                                        <constraint firstItem="urg-Ar-IY2" firstAttribute="leading" secondItem="BYd-la-0qg" secondAttribute="leading" id="OnE-mO-xFR"/>
-                                        <constraint firstItem="BYd-la-0qg" firstAttribute="top" secondItem="Ex4-U0-eh2" secondAttribute="bottom" constant="12" id="WkQ-4G-dCB"/>
-                                        <constraint firstItem="Ex4-U0-eh2" firstAttribute="leading" secondItem="1u2-9C-5M4" secondAttribute="leading" id="akZ-Sq-mXN"/>
-                                        <constraint firstItem="BYd-la-0qg" firstAttribute="leading" secondItem="Ex4-U0-eh2" secondAttribute="leading" id="bzm-V9-084"/>
-                                        <constraint firstItem="urg-Ar-IY2" firstAttribute="top" secondItem="BYd-la-0qg" secondAttribute="bottom" constant="12" id="lx9-PZ-BSe"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="1u2-9C-5M4" secondAttribute="trailing" constant="8" id="tMf-p5-Fss"/>
+                                        <constraint firstItem="urg-Ar-IY2" firstAttribute="trailing" secondItem="Ex4-U0-eh2" secondAttribute="trailing" id="F0V-Pv-rmX"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Ex4-U0-eh2" secondAttribute="trailing" constant="10" id="VPc-lD-RIn"/>
+                                        <constraint firstItem="Ex4-U0-eh2" firstAttribute="baseline" secondItem="1u2-9C-5M4" secondAttribute="baseline" id="lX6-EM-fR8"/>
+                                        <constraint firstItem="urg-Ar-IY2" firstAttribute="baseline" secondItem="BYd-la-0qg" secondAttribute="baseline" id="uaX-be-fAP"/>
+                                        <constraint firstItem="BYd-la-0qg" firstAttribute="top" secondItem="1u2-9C-5M4" secondAttribute="bottom" constant="8" id="vTv-fP-KyI"/>
                                         <constraint firstItem="1u2-9C-5M4" firstAttribute="leading" secondItem="Qd4-VQ-v87" secondAttribute="leadingMargin" constant="10" id="x94-08-GGQ"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -64,21 +69,22 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoMedicationInfoTableViewCell" rowHeight="43" id="c0R-sO-JL5" customClass="NoMedicationInfoTableViewCell" customModule="Medication" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="184" width="375" height="43"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c0R-sO-JL5" id="Pws-KL-qB0">
-                                    <frame key="frameInset" width="375" height="42.5"/>
+                                    <frame key="frameInset" width="375" height="42"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Medication Scheduled!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsI-DV-IAT">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Medication Scheduled! Tap on '+ Medication' to schedule medications." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsI-DV-IAT">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.42467236518859863" green="0.42467236518859863" blue="0.42467236518859863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstAttribute="trailingMargin" secondItem="jsI-DV-IAT" secondAttribute="trailing" constant="8" id="6hA-cV-3VD"/>
                                         <constraint firstItem="jsI-DV-IAT" firstAttribute="centerY" secondItem="Pws-KL-qB0" secondAttribute="centerY" id="LcT-wU-BIn"/>
-                                        <constraint firstItem="jsI-DV-IAT" firstAttribute="centerX" secondItem="Pws-KL-qB0" secondAttribute="centerX" id="xG3-6N-Knl"/>
+                                        <constraint firstItem="jsI-DV-IAT" firstAttribute="leading" secondItem="Pws-KL-qB0" secondAttribute="leadingMargin" constant="8" id="Pcv-zn-wwU"/>
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -91,7 +97,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ql-PG-as8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="95" y="439"/>
+            <point key="canvasLocation" x="93.599999999999994" y="438.53073463268368"/>
         </scene>
         <!--Add New Medication-->
         <scene sceneID="gus-a3-RkJ">
@@ -299,17 +305,18 @@
                                 <rect key="frame" x="0.0" y="137" width="375" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iwi-Xy-YdD" id="cEE-DA-oS2">
-                                    <frame key="frameInset" width="375" height="42.5"/>
+                                    <frame key="frameInset" width="375" height="42"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Medicine Available!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSx-WB-ONe">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Medicine Available! Tap on '+ Medicine' to add medicines." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSx-WB-ONe">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.42467236518859863" green="0.42467236518859863" blue="0.42467236518859863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="MSx-WB-ONe" firstAttribute="centerX" secondItem="cEE-DA-oS2" secondAttribute="centerX" id="HeJ-EO-E6c"/>
+                                        <constraint firstItem="MSx-WB-ONe" firstAttribute="leading" secondItem="cEE-DA-oS2" secondAttribute="leadingMargin" constant="8" id="WmN-mB-hHc"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="MSx-WB-ONe" secondAttribute="trailing" constant="8" id="XGH-tZ-XZk"/>
                                         <constraint firstItem="MSx-WB-ONe" firstAttribute="centerY" secondItem="cEE-DA-oS2" secondAttribute="centerY" id="yny-4W-OEM"/>
                                     </constraints>
                                 </tableViewCellContentView>

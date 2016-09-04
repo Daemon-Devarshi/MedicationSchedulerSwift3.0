@@ -24,7 +24,7 @@ class MedicationInfoTableViewCell: UITableViewCell {
     
     //MARK: constant declarations
     static let cellIdentifier = "MedicationInfoTableViewCell"
-    static let cellHeight: CGFloat = 156
+    static let cellHeight: CGFloat = 78
     
     //MARK: functions
     func populate(withMedicationInfo medication: Medication){
