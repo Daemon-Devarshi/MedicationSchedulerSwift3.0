@@ -26,7 +26,7 @@ class LoginViewController: FormBaseViewController{
         emptyAllInputFields()
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // To dismiss keyboard when next view controller is pushed
         tableView.endEditing(true)
         

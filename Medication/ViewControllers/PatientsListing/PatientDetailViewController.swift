@@ -35,7 +35,7 @@ class PatientDetailViewController: UIViewController {
         populate()
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let segueIdentifier = segue.identifier {
             if segueIdentifier == MedicationsTableViewController.embedSegueIdentifier {
