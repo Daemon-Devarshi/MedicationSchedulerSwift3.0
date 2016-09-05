@@ -23,7 +23,7 @@ class LoginViewController: FormBaseViewController{
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.emptyAllInputFields()
+        emptyAllInputFields()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,9 +41,11 @@ class LoginViewController: FormBaseViewController{
             }
         }
     }
-    
-    //MARK:- Internal / Private methods
-    func emptyAllInputFields() {
+}
+
+//MARK:- Private / Internal functions
+extension LoginViewController{
+    fileprivate func emptyAllInputFields() {
         emailField.text = ""
         passwordField.text = ""
     }

@@ -22,7 +22,7 @@ class MedicationsTableViewController: UITableViewController {
         }
     }
     
-    private lazy var fetchedResultsController: NSFetchedResultsController<Medication> = {
+    fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Medication> = {
         // initialize fetch request
         let fetchRequest = NSFetchRequest<Medication>()
         

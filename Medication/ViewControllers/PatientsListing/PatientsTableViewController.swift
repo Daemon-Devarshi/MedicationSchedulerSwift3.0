@@ -14,7 +14,7 @@ class PatientsTableViewController: UITableViewController {
     var managedObjectContext: NSManagedObjectContext!
     var loggedInNurse: Nurse!
     
-    private lazy var fetchedResultsController: NSFetchedResultsController<Patient> = {
+    fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Patient> = {
         // initialize fetch request
         let fetchRequest = NSFetchRequest<Patient>()
         

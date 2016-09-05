@@ -20,7 +20,7 @@ class MedicinesTableViewController: UITableViewController {
     var managedObjectContext: NSManagedObjectContext!
     var medicineSelectionHandler : MedicineSelectionHandler?
     
-    private lazy var fetchedResultsController: NSFetchedResultsController<Medicine> = {
+    fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Medicine> = {
         // initialize fetch request
         let fetchRequest = NSFetchRequest<Medicine>()
         
