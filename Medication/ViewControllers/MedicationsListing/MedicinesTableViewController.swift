@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-typealias MedicineSelectionHandler = (selectedMedicine: Medicine) -> Void
+typealias MedicineSelectionHandler = (_: Medicine) -> Void
 
 class MedicinesTableViewController: UITableViewController {
     
@@ -77,7 +77,7 @@ extension MedicinesTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath), let _medicineSelectionHandler = medicineSelectionHandler, cell is MedicineInfoTableViewCell{
             let medicine = fetchedResultsController.object(at: indexPath)
-            _medicineSelectionHandler(selectedMedicine: medicine)
+            _medicineSelectionHandler(medicine)
             _ = navigationController?.popViewController(animated: true)
         }
     }
