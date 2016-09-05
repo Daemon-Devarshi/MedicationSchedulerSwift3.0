@@ -54,7 +54,7 @@ class AddNewMedicationViewController: FormBaseViewController {
         configurePickerViews()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Anys?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let segueIdentifier = segue.identifier {
             if segueIdentifier == MedicinesTableViewController.pushSegueIdentifier {
