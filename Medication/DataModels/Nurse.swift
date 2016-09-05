@@ -26,7 +26,7 @@ class Nurse: NSManagedObject {
     class func isDuplicate(email: String, inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> Bool {
         var isDuplicate = true
         
-        let fetchRequest = NSFetchRequest<Nurse>(entityName: String(self))
+        let fetchRequest = Nurse.fetchRequest()
         let predicate = NSPredicate(format: "email = %@",email)
         fetchRequest.predicate = predicate
         
@@ -55,7 +55,7 @@ class Nurse: NSManagedObject {
         // Check if it is a duplicate entry
         if isDuplicate(email: email, inManagedObjectContext: managedObjectContext) {
             // is duplicate
-            let userInfo: [NSObject : AnyObject] = [NSLocalizedDescriptionKey :  NSLocalizedString("Duplicate Nurse!", value: "Nurse with same email already exists.", comment: "")]
+            let userInfo = [NSLocalizedDescriptionKey :  NSLocalizedString("Duplicate Nurse!", value: "Nurse with same email already exists.", comment: "")]
             insertError = NSError(domain: CoreDataCustomErrorCodes.duplicateRecord.domain, code: CoreDataCustomErrorCodes.duplicateRecord.rawValue, userInfo: userInfo)
         }
         else {
@@ -81,14 +81,14 @@ class Nurse: NSManagedObject {
     class func getNurse(withEmail email: String, password: String, inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> Nurse? {
         var nurse: Nurse?
         
-        let fetchRequest = NSFetchRequest<Nurse>(entityName: String(self))
+        let fetchRequest = Nurse.fetchRequest()
         let predicate = NSPredicate(format: "email = %@ AND password = %@",email, password)
         fetchRequest.predicate = predicate
         
         do {
             let returnArray = try managedObjectContext.fetch(fetchRequest)
             if returnArray.count > 0 {
-                nurse = returnArray.last 
+                nurse = returnArray.last as? Nurse
             }
         } catch let error as NSError {
             print(error)

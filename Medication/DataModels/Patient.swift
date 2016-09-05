@@ -19,7 +19,7 @@ class Patient: NSManagedObject {
     class func isDuplicate(email: String, nurse: Nurse, inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> Bool {
         var isDuplicate = true
         
-        let fetchRequest = NSFetchRequest<Patient>(entityName: String(self))
+        let fetchRequest = Patient.fetchRequest()
         // Patient with same name can be associated with a different nurse
         let predicate = NSPredicate(format: "email = %@ AND nurse = %@",email, nurse)
         fetchRequest.predicate = predicate
@@ -48,7 +48,7 @@ class Patient: NSManagedObject {
         // Check if it is a duplicate entry
         if isDuplicate(email: email, nurse: nurse, inManagedObjectContext: managedObjectContext) {
             // is duplicate
-            let userInfo: [NSObject : AnyObject] = [NSLocalizedDescriptionKey :  NSLocalizedString("Duplicate Patient!", value: "Patient with same email already exists.", comment: "")]
+            let userInfo = [NSLocalizedDescriptionKey :  NSLocalizedString("Duplicate Patient!", value: "Patient with same email already exists.", comment: "")]
             insertError = NSError(domain: CoreDataCustomErrorCodes.duplicateRecord.domain, code: CoreDataCustomErrorCodes.duplicateRecord.rawValue, userInfo: userInfo)
         }
         else {
