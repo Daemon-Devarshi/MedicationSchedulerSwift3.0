@@ -6,5 +6,5 @@ xcode_sdk: iphonesimulator10.0
 before_install:
 - gem install xcpretty
 script:
-- xcodebuild clean build -project Medication.xcodeproj -scheme Medication -sdk iphonesimulator CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO
-- xcodebuild test -project Medication.xcodeproj -scheme Medication -sdk iphonesimulator CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO | xcpretty -c
+- xctool -project Medication.xcodeproj -scheme Medication -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- xctool test -project Medication.xcodeproj -scheme Medication -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
