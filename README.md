@@ -1,6 +1,8 @@
 # MedicationSchedulerSwift3.0
 A simple app written in Swift 3.0 which helps nurses to schedule medications for their patients.
 
+> Note: currently this code is compiling successfully on Xcode8-beta5 but failing on beta 6, support for beta 6 is under progress at this branch [Enhancement/travis-setup](https://github.com/Daemon-Devarshi/MedicationSchedulerSwift3.0/tree/Enhancement/travis-setup)
+
 ###This app has 5 modules:
 
 1. Add Nurse
