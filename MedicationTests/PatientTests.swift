@@ -36,7 +36,8 @@ class PatientTests: XCTestCase {
         let nurseEmail = "clara@gmail.com"
         let nursePassword = "clara"
         
-        let nurse = NSEntityDescription.insertNewObject(forEntityName: "Nurse", into: managedObjectContext!) as! Nurse
+        let nurseEntity = Nurse.entity()
+        let nurse = Nurse(entity: nurseEntity, insertInto: managedObjectContext!)
         nurse.email = nurseEmail
         nurse.password = nursePassword
         

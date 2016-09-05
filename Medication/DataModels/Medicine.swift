@@ -17,7 +17,7 @@ class Medicine: NSManagedObject {
     class func isDuplicate(name: String, inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> Bool {
         var isDuplicate = true
         
-        let fetchRequest = NSFetchRequest<Medicine>(entityName: String(self))
+        let fetchRequest = NSFetchRequest<Medicine>(entityName: "Medicine")
         
         // [c] added for case-insensitive comparison
         let predicate = NSPredicate(format: "name = [c]%@",name)
@@ -53,7 +53,8 @@ class Medicine: NSManagedObject {
         }
         else {
             // name does not exist 😊
-            let newMedicine = NSEntityDescription.insertNewObject(forEntityName: String(self), into: managedObjectContext) as! Medicine
+            let medicineEntity = Medicine.entity()
+            let newMedicine = Medicine(entity: medicineEntity, insertInto: managedObjectContext)
             newMedicine.name = name
             
             do {

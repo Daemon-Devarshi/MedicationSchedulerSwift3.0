@@ -53,7 +53,8 @@ class Patient: NSManagedObject {
         }
         else {
             // email does not exist 😊
-            let newPatient = NSEntityDescription.insertNewObject(forEntityName: String(self), into: managedObjectContext) as! Patient
+            let patientEntity = Patient.entity()
+            let newPatient = Patient(entity: patientEntity, insertInto: managedObjectContext)
             newPatient.email = email
             newPatient.fullName = fullName
             newPatient.phoneNumber = phoneNumber

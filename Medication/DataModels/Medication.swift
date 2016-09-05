@@ -68,7 +68,8 @@ class Medication: NSManagedObject {
     
     //MARK: Class methods
     class func createMedication(withPatient patient:Patient, inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> Medication {
-        let medication = NSEntityDescription.insertNewObject(forEntityName: String(self), into: managedObjectContext) as! Medication
+        let medicationEntity = Medication.entity()
+        let medication = Medication(entity: medicationEntity, insertInto: managedObjectContext)
         medication.patient = patient
         return medication
     }
