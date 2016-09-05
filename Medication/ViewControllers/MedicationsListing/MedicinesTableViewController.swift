@@ -22,7 +22,11 @@ class MedicinesTableViewController: UITableViewController {
     
     private lazy var fetchedResultsController: NSFetchedResultsController<Medicine> = {
         // initialize fetch request
-        let fetchRequest = NSFetchRequest<Medicine>(entityName: String(Medicine.self))
+        let fetchRequest = NSFetchRequest<Medicine>()
+        
+        // Add entity
+        let medicineEntity = Medicine.entity()
+        fetchRequest.entity = medicineEntity
         
         // adding sort descriptors
         let sortDescriptor = NSSortDescriptor(key:Medicine.nameKey, ascending: true)

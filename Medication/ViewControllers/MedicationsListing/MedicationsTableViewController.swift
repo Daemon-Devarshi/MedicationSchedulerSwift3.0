@@ -24,7 +24,11 @@ class MedicationsTableViewController: UITableViewController {
     
     private lazy var fetchedResultsController: NSFetchedResultsController<Medication> = {
         // initialize fetch request
-        let fetchRequest = NSFetchRequest<Medication>(entityName: String(Medication.self))
+        let fetchRequest = NSFetchRequest<Medication>()
+        
+        // Add entity
+        let medicationEntity = Medication.entity()
+        fetchRequest.entity = medicationEntity
         
         // initialize predicate
         let predicate = NSPredicate(format: "patient = %@",self.patient)
