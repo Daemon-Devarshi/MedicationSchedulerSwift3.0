@@ -48,7 +48,7 @@ class Medicine: NSManagedObject {
         // Check if it is a duplicate entry
         if isDuplicate(name: name, inManagedObjectContext: managedObjectContext) {
             // is duplicate
-            let userInfo: [NSObject : AnyObject] = [NSLocalizedDescriptionKey :  NSLocalizedString("Duplicate Medicine!", value: "Medicine with same name already exists.", comment: "")]
+            let userInfo = [NSLocalizedDescriptionKey :  NSLocalizedString("Duplicate Medicine!", value: "Medicine with same name already exists.", comment: "")]
             insertError = NSError(domain: CoreDataCustomErrorCodes.duplicateRecord.domain, code: CoreDataCustomErrorCodes.duplicateRecord.rawValue, userInfo: userInfo)
         }
         else {
