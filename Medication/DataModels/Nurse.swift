@@ -11,11 +11,14 @@ import CoreData
 
 enum CoreDataCustomErrorCodes: Int {
     case duplicateRecord = 801
+    case unableToSaveData = 999
 
     var domain:String {
         switch self {
         case .duplicateRecord:
             return "Duplicate Data"
+        case .unableToSaveData:
+            return "Unable to save data"
         }
     }
 }
