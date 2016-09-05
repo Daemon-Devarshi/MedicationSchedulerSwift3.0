@@ -74,7 +74,7 @@ class FormBaseViewController: UITableViewController {
 
 //MARK:- Keyboard dismiss related methods
 extension FormBaseViewController {
-    private func assignTapGesture() {
+    fileprivate func assignTapGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(FormBaseViewController.hideKeyboard))
         tapGesture.cancelsTouchesInView = false
         tableView.addGestureRecognizer(tapGesture)

@@ -18,20 +18,20 @@ class AddNewMedicationViewController: FormBaseViewController {
     //MARK: Var declarations
     
     // Pickers
-    private var timePicker: UIDatePicker!
-    private var unitPicker: UIPickerView!
-    private var priorityPicker: UIPickerView!
+    fileprivate var timePicker: UIDatePicker!
+    fileprivate var unitPicker: UIPickerView!
+    fileprivate var priorityPicker: UIPickerView!
     
     // Values displayed in pickers
-    private var pirorityModes: [PriorityMode] = [.high, .medium, .low]
-    private var units: [Units] = [.pills, .ml]
+    fileprivate var pirorityModes: [PriorityMode] = [.high, .medium, .low]
+    fileprivate var units: [Units] = [.pills, .ml]
     
-    private var eventStore: EKEventStore?
+    fileprivate var eventStore: EKEventStore?
     
-    private var selectedMedicine: Medicine?
-    private var selectedPriority: PriorityMode?
-    private var selectedUnit: Units?
-    private var scheduleTime: Date?
+    fileprivate var selectedMedicine: Medicine?
+    fileprivate var selectedPriority: PriorityMode?
+    fileprivate var selectedUnit: Units?
+    fileprivate var scheduleTime: Date?
     
     var patient: Patient! {
         didSet {
@@ -122,7 +122,7 @@ extension AddNewMedicationViewController: UIPickerViewDataSource, UIPickerViewDe
 //MARK:- Utility methods
 extension AddNewMedicationViewController {
     // Scheduling reminders
-    private func scheduleReminder() {
+    fileprivate func scheduleReminder() {
         if let eventStore = eventStore {
             let reminder = EKReminder(eventStore: eventStore)
             let notes = "\(selectedMedicine!.name!) \(dosageField.text!) \(selectedUnit!.description)"
@@ -160,7 +160,7 @@ extension AddNewMedicationViewController {
     }
     
     // Configuring date picker
-    private func configureDatePicker() {
+    fileprivate func configureDatePicker() {
         timePicker = UIDatePicker(frame: CGRect.zero)
         timePicker.datePickerMode = .time
         timePicker.backgroundColor = UIColor.white
@@ -169,7 +169,7 @@ extension AddNewMedicationViewController {
     }
     
     // Configuring all picker views
-    private func configurePickerViews() {
+    fileprivate func configurePickerViews() {
         // configuring unitPicker
         unitPicker = UIPickerView()
         unitPicker.delegate = self

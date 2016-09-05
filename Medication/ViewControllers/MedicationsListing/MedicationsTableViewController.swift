@@ -15,7 +15,7 @@ class MedicationsTableViewController: UITableViewController {
     static let embedSegueIdentifier = "EmbedMedicationsTableViewController"
     
     //MARK: Var declarations
-    private var managedObjectContext: NSManagedObjectContext!
+    fileprivate var managedObjectContext: NSManagedObjectContext!
     var patient: Patient! {
         didSet {
             managedObjectContext = patient.managedObjectContext

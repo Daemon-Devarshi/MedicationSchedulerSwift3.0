@@ -30,8 +30,8 @@ class PatientTests: XCTestCase {
         super.tearDown()
     }
     
-    //MARK:- Private functions
-    private func getNurse() -> Nurse {
+    //MARK:- fileprivate functions
+    fileprivate func getNurse() -> Nurse {
         // create nurse
         let nurseEmail = "clara@gmail.com"
         let nursePassword = "clara"

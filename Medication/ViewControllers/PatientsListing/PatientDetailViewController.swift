@@ -14,8 +14,8 @@ class PatientDetailViewController: UIViewController {
     static let pushSegueIdentifier = "PushPatientDetailViewController"
     
     //MARK: Var declarations
-    private var managedObjectContext: NSManagedObjectContext!
-    private var medicationsTableViewController: MedicationsTableViewController!
+    fileprivate var managedObjectContext: NSManagedObjectContext!
+    fileprivate var medicationsTableViewController: MedicationsTableViewController!
     var patient: Patient! {
         didSet {
             managedObjectContext = patient.managedObjectContext
@@ -51,7 +51,7 @@ class PatientDetailViewController: UIViewController {
         }
     }
     
-    private func populate() {
+    fileprivate func populate() {
         patientName.text = patient.fullName
         patientEmail.text = patient.email
         patientPhoneNumber.text = patient.phoneNumber
