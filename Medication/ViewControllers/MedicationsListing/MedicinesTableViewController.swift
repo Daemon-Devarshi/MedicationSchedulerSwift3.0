@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-typealias MedicineSelectionHandler = (selectedMedicine: Medicine) -> Void
+typealias MedicineSelectionHandler = (_: Medicine) -> Void
 
 class MedicinesTableViewController: UITableViewController {
     
@@ -20,9 +20,13 @@ class MedicinesTableViewController: UITableViewController {
     var managedObjectContext: NSManagedObjectContext!
     var medicineSelectionHandler : MedicineSelectionHandler?
     
-    private lazy var fetchedResultsController: NSFetchedResultsController<Medicine> = {
+    fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Medicine> = {
         // initialize fetch request
-        let fetchRequest = NSFetchRequest<Medicine>(entityName: String(Medicine.self))
+        let fetchRequest = NSFetchRequest<Medicine>()
+        
+        // Add entity
+        let medicineEntity = Medicine.entity()
+        fetchRequest.entity = medicineEntity
         
         // adding sort descriptors
         let sortDescriptor = NSSortDescriptor(key:Medicine.nameKey, ascending: true)
@@ -77,7 +81,7 @@ extension MedicinesTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath), let _medicineSelectionHandler = medicineSelectionHandler, cell is MedicineInfoTableViewCell{
             let medicine = fetchedResultsController.object(at: indexPath)
-            _medicineSelectionHandler(selectedMedicine: medicine)
+            _medicineSelectionHandler(medicine)
             _ = navigationController?.popViewController(animated: true)
         }
     }

@@ -26,7 +26,7 @@ class LoginViewController: FormBaseViewController{
         emptyAllInputFields()
     }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // To dismiss keyboard when next view controller is pushed
         tableView.endEditing(true)
         
@@ -43,9 +43,9 @@ class LoginViewController: FormBaseViewController{
     }
 }
 
-//MARK:- Internal / Private methods
-extension LoginViewController {
-    private func emptyAllInputFields() {
+//MARK:- Private / Internal functions
+extension LoginViewController{
+    fileprivate func emptyAllInputFields() {
         emailField.text = ""
         passwordField.text = ""
     }

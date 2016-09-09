@@ -1,16 +1,17 @@
 //
-//  Patient.swift
+//  Patient+CoreDataClass.swift
 //  Medication
 //
-//  Created by Devarshi Kulshreshtha on 8/20/16.
+//  Created by Devarshi Kulshreshtha on 9/9/16.
 //  Copyright © 2016 Devarshi. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-class Patient: NSManagedObject {
 
+public class Patient: NSManagedObject {
+    
     // Insert code here to add functionality to your managed object subclass
     static let fullNameKey = "fullName"
     
@@ -19,7 +20,7 @@ class Patient: NSManagedObject {
     class func isDuplicate(email: String, nurse: Nurse, inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> Bool {
         var isDuplicate = true
         
-        let fetchRequest = NSFetchRequest<Patient>(entityName: String(self))
+        let fetchRequest: NSFetchRequest<Patient> = Patient.fetchRequest()
         // Patient with same name can be associated with a different nurse
         let predicate = NSPredicate(format: "email = %@ AND nurse = %@",email, nurse)
         fetchRequest.predicate = predicate
@@ -48,12 +49,12 @@ class Patient: NSManagedObject {
         // Check if it is a duplicate entry
         if isDuplicate(email: email, nurse: nurse, inManagedObjectContext: managedObjectContext) {
             // is duplicate
-            let userInfo: [NSObject : AnyObject] = [NSLocalizedDescriptionKey :  NSLocalizedString("Duplicate Patient!", value: "Patient with same email already exists.", comment: "")]
+            let userInfo = [NSLocalizedDescriptionKey :  NSLocalizedString("Duplicate Patient!", value: "Patient with same email already exists.", comment: "")]
             insertError = NSError(domain: CoreDataCustomErrorCodes.duplicateRecord.domain, code: CoreDataCustomErrorCodes.duplicateRecord.rawValue, userInfo: userInfo)
         }
         else {
             // email does not exist 😊
-            let newPatient = NSEntityDescription.insertNewObject(forEntityName: String(self), into: managedObjectContext) as! Patient
+            let newPatient = Patient(context: managedObjectContext)
             newPatient.email = email
             newPatient.fullName = fullName
             newPatient.phoneNumber = phoneNumber

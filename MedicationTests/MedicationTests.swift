@@ -27,13 +27,13 @@ class MedicationTests: XCTestCase {
         super.tearDown()
     }
     
-    //MARK:- Private functions
-    private func getPatient() -> Patient {
+    //MARK:- fileprivate functions
+    fileprivate func getPatient() -> Patient {
         // create nurse
         let nurseEmail = "clara@gmail.com"
         let nursePassword = "clara"
         
-        let nurse = NSEntityDescription.insertNewObject(forEntityName: "Nurse", into: managedObjectContext!) as! Nurse
+        let nurse = Nurse(context: managedObjectContext!)
         nurse.email = nurseEmail
         nurse.password = nursePassword
         
@@ -42,7 +42,7 @@ class MedicationTests: XCTestCase {
         let fullName = "Edward Jenner"
         let phoneNumer = "8989236784"
         
-        let patient = NSEntityDescription.insertNewObject(forEntityName: "Patient", into: managedObjectContext!) as! Patient
+        let patient = Patient(context: managedObjectContext!)
         patient.email = email
         patient.fullName = fullName
         patient.phoneNumber = phoneNumer
@@ -78,10 +78,11 @@ class MedicationTests: XCTestCase {
         
         // assigning values to medication before isEmpty check
         medication.dosage = 24
-        medication.scheduleTime = Date()
+        medication.scheduleTime = Date() as NSDate
         
         // CreateMedicine
-        let medicine = NSEntityDescription.insertNewObject(forEntityName: "Medicine", into: managedObjectContext!) as! Medicine
+        let medicineEntity = Medicine.entity()
+        let medicine = Medicine(entity: medicineEntity, insertInto: managedObjectContext!)
         medicine.name = "Asprin"
         
         medication.medicine = medicine

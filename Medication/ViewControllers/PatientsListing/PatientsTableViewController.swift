@@ -14,9 +14,13 @@ class PatientsTableViewController: UITableViewController {
     var managedObjectContext: NSManagedObjectContext!
     var loggedInNurse: Nurse!
     
-    private lazy var fetchedResultsController: NSFetchedResultsController<Patient> = {
+    fileprivate lazy var fetchedResultsController: NSFetchedResultsController<Patient> = {
         // initialize fetch request
-        let fetchRequest = NSFetchRequest<Patient>(entityName: String(Patient.self))
+        let fetchRequest = NSFetchRequest<Patient>()
+        
+        // Add entity
+        let patientEntity = Patient.entity()
+        fetchRequest.entity = patientEntity
         
         // initialize predicate
         let predicate = NSPredicate(format: "nurse = %@",self.loggedInNurse)
@@ -57,7 +61,7 @@ class PatientsTableViewController: UITableViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // To dismiss keyboard when next view controller is pushed
         tableView.endEditing(true)
         

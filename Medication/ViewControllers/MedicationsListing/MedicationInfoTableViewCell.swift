@@ -29,7 +29,8 @@ class MedicationInfoTableViewCell: UITableViewCell {
     //MARK: functions
     func populate(withMedicationInfo medication: Medication){
         name.text = medication.medicine!.name
-        scheduleTime.text = medication.scheduleTime!.displayTime()
+        let time = medication.scheduleTime! as Date
+        scheduleTime.text = time.displayTime()
         let unit = Units(rawValue: Int(medication.unit!))!.description
         dosage.text = "\(medication.dosage!.int32Value) \(unit)"
         priority.text = "\(medication.priorityMode.description)"

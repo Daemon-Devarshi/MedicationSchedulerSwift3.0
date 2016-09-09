@@ -2,23 +2,24 @@
 //  Medication+CoreDataProperties.swift
 //  Medication
 //
-//  Created by Devarshi Kulshreshtha on 9/2/16.
+//  Created by Devarshi Kulshreshtha on 9/9/16.
 //  Copyright © 2016 Devarshi. All rights reserved.
-//
-//  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
-//  to delete and recreate this implementation file for your updated model.
 //
 
 import Foundation
-import CoreData
+import CoreData 
 
 extension Medication {
 
-    @NSManaged var dosage: NSNumber?
-    @NSManaged var unit: NSNumber?
-    @NSManaged var priority: NSNumber?
-    @NSManaged var scheduleTime: Date?
-    @NSManaged var medicine: Medicine?
-    @NSManaged var patient: Patient?
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Medication> {
+        return NSFetchRequest<Medication>(entityName: "Medication");
+    }
+
+    @NSManaged public var dosage: NSNumber?
+    @NSManaged public var priority: NSNumber?
+    @NSManaged public var scheduleTime: NSDate?
+    @NSManaged public var unit: NSNumber?
+    @NSManaged public var medicine: Medicine?
+    @NSManaged public var patient: Patient?
 
 }

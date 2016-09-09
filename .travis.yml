@@ -1,0 +1,9 @@
+language: objective-c
+osx_image: xcode8
+xcode_project: Medication.xcodeproj
+xcode_scheme: Medication
+xcode_sdk: iphonesimulator10.0
+before_install:
+- gem install xcpretty
+script:
+- xcodebuild -scheme Medication -project Medication.xcodeproj -configuration 'Debug' -destination 'platform=iOS Simulator,id=1A6EAD45-0A28-421A-A6D4-AD0866464FAA' clean build test

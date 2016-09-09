@@ -30,13 +30,13 @@ class PatientTests: XCTestCase {
         super.tearDown()
     }
     
-    //MARK:- Private functions
-    private func getNurse() -> Nurse {
+    //MARK:- fileprivate functions
+    fileprivate func getNurse() -> Nurse {
         // create nurse
         let nurseEmail = "clara@gmail.com"
         let nursePassword = "clara"
         
-        let nurse = NSEntityDescription.insertNewObject(forEntityName: "Nurse", into: managedObjectContext!) as! Nurse
+        let nurse = Nurse(context: managedObjectContext!)
         nurse.email = nurseEmail
         nurse.password = nursePassword
         

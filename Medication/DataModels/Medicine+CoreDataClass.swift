@@ -1,15 +1,16 @@
 //
-//  Medicine.swift
+//  Medicine+CoreDataClass.swift
 //  Medication
 //
-//  Created by Devarshi Kulshreshtha on 8/20/16.
+//  Created by Devarshi Kulshreshtha on 9/9/16.
 //  Copyright © 2016 Devarshi. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-class Medicine: NSManagedObject {
+
+public class Medicine: NSManagedObject {
     static let nameKey = "name"
     
     //MARK:- Class functions
@@ -17,7 +18,7 @@ class Medicine: NSManagedObject {
     class func isDuplicate(name: String, inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> Bool {
         var isDuplicate = true
         
-        let fetchRequest = NSFetchRequest<Medicine>(entityName: String(self))
+        let fetchRequest = NSFetchRequest<Medicine>(entityName: "Medicine")
         
         // [c] added for case-insensitive comparison
         let predicate = NSPredicate(format: "name = [c]%@",name)
@@ -48,12 +49,12 @@ class Medicine: NSManagedObject {
         // Check if it is a duplicate entry
         if isDuplicate(name: name, inManagedObjectContext: managedObjectContext) {
             // is duplicate
-            let userInfo: [NSObject : AnyObject] = [NSLocalizedDescriptionKey :  NSLocalizedString("Duplicate Medicine!", value: "Medicine with same name already exists.", comment: "")]
+            let userInfo = [NSLocalizedDescriptionKey :  NSLocalizedString("Duplicate Medicine!", value: "Medicine with same name already exists.", comment: "")]
             insertError = NSError(domain: CoreDataCustomErrorCodes.duplicateRecord.domain, code: CoreDataCustomErrorCodes.duplicateRecord.rawValue, userInfo: userInfo)
         }
         else {
             // name does not exist 😊
-            let newMedicine = NSEntityDescription.insertNewObject(forEntityName: String(self), into: managedObjectContext) as! Medicine
+            let newMedicine = Medicine(context: managedObjectContext)
             newMedicine.name = name
             
             do {
