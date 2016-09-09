@@ -1,13 +1,14 @@
 //
-//  Medication.swift
+//  Medication+CoreDataClass.swift
 //  Medication
 //
-//  Created by Devarshi Kulshreshtha on 8/20/16.
+//  Created by Devarshi Kulshreshtha on 9/9/16.
 //  Copyright © 2016 Devarshi. All rights reserved.
 //
 
 import Foundation
 import CoreData
+
 
 // enum declarations
 enum PriorityMode: Int, CustomStringConvertible {
@@ -41,7 +42,7 @@ enum Units: Int, CustomStringConvertible {
     }
 }
 
-class Medication: NSManagedObject {
+public class Medication: NSManagedObject {
     
     
     static let scheduleTimeKey = "scheduleTime"
@@ -68,10 +69,9 @@ class Medication: NSManagedObject {
     
     //MARK: Class methods
     class func createMedication(withPatient patient:Patient, inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> Medication {
-        let medicationEntity = Medication.entity()
-        let medication = Medication(entity: medicationEntity, insertInto: managedObjectContext)
+        let medication = Medication(context: managedObjectContext)
         medication.patient = patient
         return medication
     }
-
+    
 }

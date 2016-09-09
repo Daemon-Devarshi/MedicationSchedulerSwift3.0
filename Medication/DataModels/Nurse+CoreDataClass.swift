@@ -1,18 +1,19 @@
 //
-//  Nurse.swift
+//  Nurse+CoreDataClass.swift
 //  Medication
 //
-//  Created by Devarshi Kulshreshtha on 8/20/16.
+//  Created by Devarshi Kulshreshtha on 9/9/16.
 //  Copyright © 2016 Devarshi. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
+
 enum CoreDataCustomErrorCodes: Int {
     case duplicateRecord = 801
     case unableToSaveData = 999
-
+    
     var domain:String {
         switch self {
         case .duplicateRecord:
@@ -23,13 +24,13 @@ enum CoreDataCustomErrorCodes: Int {
     }
 }
 
-class Nurse: NSManagedObject {
+public class Nurse: NSManagedObject {
     //MARK:- Class functions
     // check for duplicate nurse record
     class func isDuplicate(email: String, inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> Bool {
         var isDuplicate = true
         
-        let fetchRequest = Nurse.fetchRequest()
+        let fetchRequest: NSFetchRequest<Nurse> = Nurse.fetchRequest()
         let predicate = NSPredicate(format: "email = %@",email)
         fetchRequest.predicate = predicate
         
@@ -63,8 +64,7 @@ class Nurse: NSManagedObject {
         }
         else {
             // email does not exist 😊
-            let nurseEntity = Nurse.entity()
-            let newNurse = Nurse(entity: nurseEntity, insertInto: managedObjectContext)
+            let newNurse = Nurse(context: managedObjectContext)
             newNurse.email = email
             newNurse.password = password
             
@@ -84,14 +84,14 @@ class Nurse: NSManagedObject {
     class func getNurse(withEmail email: String, password: String, inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> Nurse? {
         var nurse: Nurse?
         
-        let fetchRequest = Nurse.fetchRequest()
+        let fetchRequest: NSFetchRequest<Nurse> = Nurse.fetchRequest()
         let predicate = NSPredicate(format: "email = %@ AND password = %@",email, password)
         fetchRequest.predicate = predicate
         
         do {
             let returnArray = try managedObjectContext.fetch(fetchRequest)
             if returnArray.count > 0 {
-                nurse = returnArray.last as? Nurse
+                nurse = returnArray.last
             }
         } catch let error as NSError {
             print(error)

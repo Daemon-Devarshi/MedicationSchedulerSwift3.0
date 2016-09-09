@@ -2,11 +2,8 @@
 //  Patient+CoreDataProperties.swift
 //  Medication
 //
-//  Created by Devarshi Kulshreshtha on 8/21/16.
+//  Created by Devarshi Kulshreshtha on 9/9/16.
 //  Copyright © 2016 Devarshi. All rights reserved.
-//
-//  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
-//  to delete and recreate this implementation file for your updated model.
 //
 
 import Foundation
@@ -14,10 +11,31 @@ import CoreData
 
 extension Patient {
 
-    @NSManaged var email: String?
-    @NSManaged var fullName: String?
-    @NSManaged var phoneNumber: String?
-    @NSManaged var medication: NSSet?
-    @NSManaged var nurse: Nurse?
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Patient> {
+        return NSFetchRequest<Patient>(entityName: "Patient");
+    }
+
+    @NSManaged public var email: String?
+    @NSManaged public var fullName: String?
+    @NSManaged public var phoneNumber: String?
+    @NSManaged public var medication: NSSet?
+    @NSManaged public var nurse: Nurse?
+
+}
+
+// MARK: Generated accessors for medication
+extension Patient {
+
+    @objc(addMedicationObject:)
+    @NSManaged public func addToMedication(_ value: Medication)
+
+    @objc(removeMedicationObject:)
+    @NSManaged public func removeFromMedication(_ value: Medication)
+
+    @objc(addMedication:)
+    @NSManaged public func addToMedication(_ values: NSSet)
+
+    @objc(removeMedication:)
+    @NSManaged public func removeFromMedication(_ values: NSSet)
 
 }

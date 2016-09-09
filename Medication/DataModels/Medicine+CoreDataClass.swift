@@ -1,15 +1,16 @@
 //
-//  Medicine.swift
+//  Medicine+CoreDataClass.swift
 //  Medication
 //
-//  Created by Devarshi Kulshreshtha on 8/20/16.
+//  Created by Devarshi Kulshreshtha on 9/9/16.
 //  Copyright © 2016 Devarshi. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-class Medicine: NSManagedObject {
+
+public class Medicine: NSManagedObject {
     static let nameKey = "name"
     
     //MARK:- Class functions
@@ -53,8 +54,7 @@ class Medicine: NSManagedObject {
         }
         else {
             // name does not exist 😊
-            let medicineEntity = Medicine.entity()
-            let newMedicine = Medicine(entity: medicineEntity, insertInto: managedObjectContext)
+            let newMedicine = Medicine(context: managedObjectContext)
             newMedicine.name = name
             
             do {

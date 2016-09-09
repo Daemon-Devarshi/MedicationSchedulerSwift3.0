@@ -1,16 +1,17 @@
 //
-//  Patient.swift
+//  Patient+CoreDataClass.swift
 //  Medication
 //
-//  Created by Devarshi Kulshreshtha on 8/20/16.
+//  Created by Devarshi Kulshreshtha on 9/9/16.
 //  Copyright © 2016 Devarshi. All rights reserved.
 //
 
 import Foundation
 import CoreData
 
-class Patient: NSManagedObject {
 
+public class Patient: NSManagedObject {
+    
     // Insert code here to add functionality to your managed object subclass
     static let fullNameKey = "fullName"
     
@@ -19,7 +20,7 @@ class Patient: NSManagedObject {
     class func isDuplicate(email: String, nurse: Nurse, inManagedObjectContext managedObjectContext: NSManagedObjectContext) -> Bool {
         var isDuplicate = true
         
-        let fetchRequest = Patient.fetchRequest()
+        let fetchRequest: NSFetchRequest<Patient> = Patient.fetchRequest()
         // Patient with same name can be associated with a different nurse
         let predicate = NSPredicate(format: "email = %@ AND nurse = %@",email, nurse)
         fetchRequest.predicate = predicate
@@ -53,8 +54,7 @@ class Patient: NSManagedObject {
         }
         else {
             // email does not exist 😊
-            let patientEntity = Patient.entity()
-            let newPatient = Patient(entity: patientEntity, insertInto: managedObjectContext)
+            let newPatient = Patient(context: managedObjectContext)
             newPatient.email = email
             newPatient.fullName = fullName
             newPatient.phoneNumber = phoneNumber

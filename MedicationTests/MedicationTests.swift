@@ -33,8 +33,7 @@ class MedicationTests: XCTestCase {
         let nurseEmail = "clara@gmail.com"
         let nursePassword = "clara"
         
-        let nurseEntity = Nurse.entity()
-        let nurse = Nurse(entity: nurseEntity, insertInto: managedObjectContext!)
+        let nurse = Nurse(context: managedObjectContext!)
         nurse.email = nurseEmail
         nurse.password = nursePassword
         
@@ -43,8 +42,7 @@ class MedicationTests: XCTestCase {
         let fullName = "Edward Jenner"
         let phoneNumer = "8989236784"
         
-        let patientEntity = Patient.entity()
-        let patient = Patient(entity: patientEntity, insertInto: managedObjectContext!)
+        let patient = Patient(context: managedObjectContext!)
         patient.email = email
         patient.fullName = fullName
         patient.phoneNumber = phoneNumer
@@ -80,7 +78,7 @@ class MedicationTests: XCTestCase {
         
         // assigning values to medication before isEmpty check
         medication.dosage = 24
-        medication.scheduleTime = Date()
+        medication.scheduleTime = Date() as NSDate
         
         // CreateMedicine
         let medicineEntity = Medicine.entity()

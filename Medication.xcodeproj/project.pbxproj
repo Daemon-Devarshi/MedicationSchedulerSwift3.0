@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0A6BA01D81F5FE008588F4 /* Medicine+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A6B981D81F5FE008588F4 /* Medicine+CoreDataClass.swift */; };
+		3D0A6BA11D81F5FE008588F4 /* Medicine+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A6B991D81F5FE008588F4 /* Medicine+CoreDataProperties.swift */; };
+		3D0A6BA21D81F5FE008588F4 /* Nurse+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A6B9A1D81F5FE008588F4 /* Nurse+CoreDataClass.swift */; };
+		3D0A6BA31D81F5FE008588F4 /* Nurse+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A6B9B1D81F5FE008588F4 /* Nurse+CoreDataProperties.swift */; };
+		3D0A6BA41D81F5FE008588F4 /* Medication+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A6B9C1D81F5FE008588F4 /* Medication+CoreDataClass.swift */; };
+		3D0A6BA51D81F5FE008588F4 /* Medication+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A6B9D1D81F5FE008588F4 /* Medication+CoreDataProperties.swift */; };
+		3D0A6BA61D81F5FE008588F4 /* Patient+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A6B9E1D81F5FE008588F4 /* Patient+CoreDataClass.swift */; };
+		3D0A6BA71D81F5FE008588F4 /* Patient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0A6B9F1D81F5FE008588F4 /* Patient+CoreDataProperties.swift */; };
 		3D0FE79E1D6B3EEB00DE9E48 /* XCTestCase+CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0FE79C1D6B3EEB00DE9E48 /* XCTestCase+CoreDataHelper.swift */; };
 		3D0FE79F1D6B3EEB00DE9E48 /* NurseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0FE79D1D6B3EEB00DE9E48 /* NurseTests.swift */; };
 		3D0FE7A11D6B42A200DE9E48 /* MedicineTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0FE7A01D6B42A200DE9E48 /* MedicineTest.swift */; };
@@ -17,14 +25,6 @@
 		3D2EFAD41D68529A00A3EB08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3D2EFAD31D68529A00A3EB08 /* Assets.xcassets */; };
 		3D2EFAD71D68529A00A3EB08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2EFAD51D68529A00A3EB08 /* LaunchScreen.storyboard */; };
 		3D2EFAE21D68529A00A3EB08 /* MedicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EFAE11D68529A00A3EB08 /* MedicationTests.swift */; };
-		3D2EFB0F1D6884B100A3EB08 /* Medication+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EFB071D6884B100A3EB08 /* Medication+CoreDataProperties.swift */; };
-		3D2EFB121D6884B100A3EB08 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EFB081D6884B100A3EB08 /* Medication.swift */; };
-		3D2EFB151D6884B100A3EB08 /* Patient+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EFB091D6884B100A3EB08 /* Patient+CoreDataProperties.swift */; };
-		3D2EFB181D6884B100A3EB08 /* Patient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EFB0A1D6884B100A3EB08 /* Patient.swift */; };
-		3D2EFB1B1D6884B100A3EB08 /* Nurse+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EFB0B1D6884B100A3EB08 /* Nurse+CoreDataProperties.swift */; };
-		3D2EFB1E1D6884B100A3EB08 /* Nurse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EFB0C1D6884B100A3EB08 /* Nurse.swift */; };
-		3D2EFB211D6884B100A3EB08 /* Medicine+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EFB0D1D6884B100A3EB08 /* Medicine+CoreDataProperties.swift */; };
-		3D2EFB241D6884B100A3EB08 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EFB0E1D6884B100A3EB08 /* Medicine.swift */; };
 		3D2EFB401D688CDA00A3EB08 /* Patient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D2EFB3E1D688CDA00A3EB08 /* Patient.storyboard */; };
 		3D2EFB4F1D6892D400A3EB08 /* PatientInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EFB4D1D6892D400A3EB08 /* PatientInfoTableViewCell.swift */; };
 		3D2EFB521D6892D400A3EB08 /* PatientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D2EFB4E1D6892D400A3EB08 /* PatientsTableViewController.swift */; };
@@ -57,6 +57,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D0A6B981D81F5FE008588F4 /* Medicine+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Medicine+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3D0A6B991D81F5FE008588F4 /* Medicine+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Medicine+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3D0A6B9A1D81F5FE008588F4 /* Nurse+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Nurse+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3D0A6B9B1D81F5FE008588F4 /* Nurse+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Nurse+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3D0A6B9C1D81F5FE008588F4 /* Medication+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Medication+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3D0A6B9D1D81F5FE008588F4 /* Medication+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Medication+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3D0A6B9E1D81F5FE008588F4 /* Patient+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Patient+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3D0A6B9F1D81F5FE008588F4 /* Patient+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Patient+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3D0FE79C1D6B3EEB00DE9E48 /* XCTestCase+CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTestCase+CoreDataHelper.swift"; sourceTree = "<group>"; };
 		3D0FE79D1D6B3EEB00DE9E48 /* NurseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NurseTests.swift; sourceTree = "<group>"; };
 		3D0FE7A01D6B42A200DE9E48 /* MedicineTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicineTest.swift; sourceTree = "<group>"; };
@@ -71,14 +79,6 @@
 		3D2EFADD1D68529A00A3EB08 /* MedicationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3D2EFAE11D68529A00A3EB08 /* MedicationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationTests.swift; sourceTree = "<group>"; };
 		3D2EFAE31D68529A00A3EB08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3D2EFB071D6884B100A3EB08 /* Medication+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Medication+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3D2EFB081D6884B100A3EB08 /* Medication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
-		3D2EFB091D6884B100A3EB08 /* Patient+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Patient+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3D2EFB0A1D6884B100A3EB08 /* Patient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Patient.swift; sourceTree = "<group>"; };
-		3D2EFB0B1D6884B100A3EB08 /* Nurse+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Nurse+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3D2EFB0C1D6884B100A3EB08 /* Nurse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Nurse.swift; sourceTree = "<group>"; };
-		3D2EFB0D1D6884B100A3EB08 /* Medicine+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Medicine+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3D2EFB0E1D6884B100A3EB08 /* Medicine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
 		3D2EFB3F1D688CDA00A3EB08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Patient.storyboard; sourceTree = "<group>"; };
 		3D2EFB4D1D6892D400A3EB08 /* PatientInfoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientInfoTableViewCell.swift; sourceTree = "<group>"; };
 		3D2EFB4E1D6892D400A3EB08 /* PatientsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientsTableViewController.swift; sourceTree = "<group>"; };
@@ -168,14 +168,14 @@
 		3D2EFB061D68848200A3EB08 /* DataModels */ = {
 			isa = PBXGroup;
 			children = (
-				3D2EFB071D6884B100A3EB08 /* Medication+CoreDataProperties.swift */,
-				3D2EFB081D6884B100A3EB08 /* Medication.swift */,
-				3D2EFB091D6884B100A3EB08 /* Patient+CoreDataProperties.swift */,
-				3D2EFB0A1D6884B100A3EB08 /* Patient.swift */,
-				3D2EFB0B1D6884B100A3EB08 /* Nurse+CoreDataProperties.swift */,
-				3D2EFB0C1D6884B100A3EB08 /* Nurse.swift */,
-				3D2EFB0D1D6884B100A3EB08 /* Medicine+CoreDataProperties.swift */,
-				3D2EFB0E1D6884B100A3EB08 /* Medicine.swift */,
+				3D0A6B981D81F5FE008588F4 /* Medicine+CoreDataClass.swift */,
+				3D0A6B991D81F5FE008588F4 /* Medicine+CoreDataProperties.swift */,
+				3D0A6B9A1D81F5FE008588F4 /* Nurse+CoreDataClass.swift */,
+				3D0A6B9B1D81F5FE008588F4 /* Nurse+CoreDataProperties.swift */,
+				3D0A6B9C1D81F5FE008588F4 /* Medication+CoreDataClass.swift */,
+				3D0A6B9D1D81F5FE008588F4 /* Medication+CoreDataProperties.swift */,
+				3D0A6B9E1D81F5FE008588F4 /* Patient+CoreDataClass.swift */,
+				3D0A6B9F1D81F5FE008588F4 /* Patient+CoreDataProperties.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -366,26 +366,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D2EFB0F1D6884B100A3EB08 /* Medication+CoreDataProperties.swift in Sources */,
-				3D2EFB241D6884B100A3EB08 /* Medicine.swift in Sources */,
 				3D2EFB621D68937C00A3EB08 /* AddNewMedicineViewController.swift in Sources */,
-				3D2EFB121D6884B100A3EB08 /* Medication.swift in Sources */,
 				3D2EFB581D68937400A3EB08 /* LoginViewController.swift in Sources */,
 				3D2EFB791D68BADF00A3EB08 /* String+Utilities.swift in Sources */,
-				3D2EFB181D6884B100A3EB08 /* Patient.swift in Sources */,
 				3DAEF6921D69981D006E1561 /* MedicationInfoTableViewCell.swift in Sources */,
-				3D2EFB211D6884B100A3EB08 /* Medicine+CoreDataProperties.swift in Sources */,
 				3DF96CB41D79F93600BDB0F3 /* NSDate+Utilities.swift in Sources */,
+				3D0A6BA31D81F5FE008588F4 /* Nurse+CoreDataProperties.swift in Sources */,
 				3D2EFB701D68AA9700A3EB08 /* PatientDetailViewController.swift in Sources */,
+				3D0A6BA21D81F5FE008588F4 /* Nurse+CoreDataClass.swift in Sources */,
+				3D0A6BA01D81F5FE008588F4 /* Medicine+CoreDataClass.swift in Sources */,
+				3D0A6BA51D81F5FE008588F4 /* Medication+CoreDataProperties.swift in Sources */,
 				3D2EFAD21D68529A00A3EB08 /* Medication.xcdatamodeld in Sources */,
 				3DAEF6941D69A23D006E1561 /* MedicinesTableViewController.swift in Sources */,
+				3D0A6BA41D81F5FE008588F4 /* Medication+CoreDataClass.swift in Sources */,
 				3DAEF6961D69A316006E1561 /* MedicineInfoTableViewCell.swift in Sources */,
 				3DAEF68D1D69966C006E1561 /* MedicationsTableViewController.swift in Sources */,
-				3D2EFB1E1D6884B100A3EB08 /* Nurse.swift in Sources */,
+				3D0A6BA71D81F5FE008588F4 /* Patient+CoreDataProperties.swift in Sources */,
+				3D0A6BA61D81F5FE008588F4 /* Patient+CoreDataClass.swift in Sources */,
 				3D2EFB681D68937C00A3EB08 /* AddNewPatientViewController.swift in Sources */,
-				3D2EFB1B1D6884B100A3EB08 /* Nurse+CoreDataProperties.swift in Sources */,
 				3D2EFACC1D68529A00A3EB08 /* ViewController.swift in Sources */,
-				3D2EFB151D6884B100A3EB08 /* Patient+CoreDataProperties.swift in Sources */,
+				3D0A6BA11D81F5FE008588F4 /* Medicine+CoreDataProperties.swift in Sources */,
 				3D2EFB651D68937C00A3EB08 /* AddNewNurseViewController.swift in Sources */,
 				3D2EFACA1D68529A00A3EB08 /* AppDelegate.swift in Sources */,
 				3D2EFB4F1D6892D400A3EB08 /* PatientInfoTableViewCell.swift in Sources */,

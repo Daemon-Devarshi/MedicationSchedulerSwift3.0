@@ -217,7 +217,7 @@ extension AddNewMedicationViewController {
         medication.dosage = NSNumber(value: Int32(dosage)!)
         medication.unit = NSNumber(value: Int32(selectedUnit.rawValue))
         medication.priority = NSNumber(value: Int32(selectedPriority.rawValue))
-        medication.scheduleTime = scheduleTime
+        medication.scheduleTime = scheduleTime as NSDate
         medication.medicine = selectedMedicine
         medication.patient = patient
     
