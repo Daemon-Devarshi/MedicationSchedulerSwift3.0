@@ -6,4 +6,4 @@ xcode_sdk: iphonesimulator10.0
 before_install:
 - gem install xcpretty
 script:
-- xcodebuild -scheme Medication -project Medication.xcodeproj -configuration 'Debug' -destination 'platform=iOS Simulator,id=E4E259F5-74F4-488C-8FCE-D26641A0F0B8' clean build test
+- xcodebuild -scheme Medication -project Medication.xcodeproj -configuration 'Debug' -destination 'platform=iOS Simulator,id=1A6EAD45-0A28-421A-A6D4-AD0866464FAA' clean build test
